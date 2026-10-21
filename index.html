@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Small Town Cutthroat Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Top Status Bar -->
+        <header id="top-bar">
+            <h2>Small Town Monopoly</h2>
+            <button id="menu-toggle" onclick="toggleSidebar()">👥 Characters</button>
+        </header>
+
+        <!-- Character Sidebar (Pass & Play) -->
+        <aside id="sidebar" class="hidden">
+            <h3>Characters</h3>
+            <div id="character-list"></div>
+            <button onclick="toggleSidebar()">Close Menu</button>
+        </aside>
+
+        <!-- Main Game Area -->
+        <main id="main-view">
+            <!-- Active Character HUD -->
+            <div id="char-hud" class="card">
+                <h3 id="active-name">Select a Character</h3>
+                <p>Cash: <span id="active-cash">$1,000,000</span></p>
+                <p>Gas Tank: <span id="active-gas">5</span> / 5 miles</p>
+                <p>Status: <span id="active-status">Alive</span></p>
+                <p>Location: <span id="active-location">Town Square</span></p>
+            </div>
+
+            <!-- Action / Location Panel -->
+            <div id="action-panel" class="card">
+                <h3>Current Location Actions</h3>
+                <div id="location-actions">
+                    <p>Select a character from the menu to begin taking turns!</p>
+                </div>
+            </div>
+
+            <!-- Town Navigation Map -->
+            <div id="map-panel" class="card">
+                <h3>Travel to Location</h3>
+                <div id="destination-buttons" class="grid-buttons"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
